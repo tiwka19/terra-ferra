@@ -1,0 +1,6 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.section-title {
+  @include adaptiveValue('font-size', 64, 28);
+  @include adaptiveValue('margin-bottom', 45, 25);
+  text-transform: uppercase;
+}

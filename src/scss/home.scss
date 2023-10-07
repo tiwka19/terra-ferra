@@ -1,0 +1,285 @@
+//====================================================================================================
+.hero {
+  padding-top: toRem(97);
+  border-bottom: 1.5px solid #d7d7d7;
+  &__top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: toRem(30);
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+      gap: toRem(0);
+    }
+  }
+  &__data {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (max-width: $mobile) {
+      padding: toRem(56) 0;
+    }
+  }
+  &__image {
+    @media (max-width: $mobile) {
+      margin: 0 toRem(-30);
+    }
+  }
+  &__image img {
+    max-width: 100%;
+    object-fit: cover;
+    height: auto;
+  }
+  &__title {
+    @include adaptiveValue('font-size', 64, 44);
+    text-transform: uppercase;
+    max-width: toRem(551);
+    margin-top: auto;
+    margin-bottom: auto;
+    @media (max-width: $mobile) {
+      margin: 0;
+      margin-bottom: toRem(25);
+    }
+  }
+  &__description {
+    line-height: math.div(24, 18);
+    @media (min-width: $mobile) {
+      padding-bottom: toRem(40);
+    }
+  }
+  &__bottom {
+    position: relative;
+    margin: 0 toRem(-15);
+    img {
+      max-width: 100%;
+      object-fit: cover;
+      height: auto;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -50%;
+      width: 200%;
+      height: toRem(1);
+      background-color: #d7d7d7;
+    }
+  }
+}
+
+.contacts {
+  &__container {
+    padding-top: toRem(80);
+    padding-bottom: toRem(80);
+    @media (max-width: $mobile) {
+      padding-top: toRem(65);
+      padding-bottom: toRem(65);
+    }
+  }
+  &__title {
+    margin-bottom: toRem(35);
+    @include adaptiveValue('font-size', 34, 22);
+    max-width: toRem(562);
+    line-height: math.div(42, 34);
+    @media (max-width: $mobile) {
+      margin-bottom: toRem(25);
+    }
+  }
+  &__data {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: toRem(45);
+    @media (max-width: $mobile) {
+      gap: toRem(30);
+    }
+    a {
+      @media (max-width: $mobileSmall) {
+        img {
+          height: toRem(35);
+        }
+      }
+    }
+  }
+  &__button {
+    @media (max-width: $mobile) {
+      flex: 1 1 auto;
+      width: 100%;
+    }
+  }
+  &__button a {
+    padding: toRem(11) toRem(40);
+  }
+}
+
+.benefits {
+  border-top: 1.5px solid #d7d7d7;
+  &__container {
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: toRem(550) 1fr;
+    @media (max-width: em(1180)) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__image {
+    height: 100%;
+    margin-left: toRem(-130);
+    @media (max-width: $pc) {
+      display: none;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__data {
+    padding: toRem(80) 0 toRem(80) toRem(80);
+    @media (max-width: $pc) {
+      padding-left: 0;
+      padding-top: toRem(65);
+      padding-bottom: toRem(65);
+    }
+  }
+
+  &__items {
+    margin-bottom: toRem(15);
+  }
+  &__item {
+    max-width: toRem(400);
+  }
+  &__item:not(:last-child) {
+    margin-bottom: toRem(55);
+    @media (max-width: $pc) {
+      margin-bottom: toRem(35);
+    }
+  }
+  &__item-title {
+    @include adaptiveValue('font-size', 34, 24);
+    margin-bottom: toRem(25);
+    @media (max-width: $mobile) {
+      margin-bottom: toRem(15);
+    }
+  }
+  &__link {
+    color: $primaryColor;
+    font-size: toRem(24);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+.preview {
+  &__wrapper {
+    margin: 0 toRem(-15);
+    img,
+    picture {
+      max-width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+.preview-2 img {
+  min-height: toRem(486);
+  object-fit: cover;
+  width: 100%;
+}
+
+.advantages {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: toRem(-15);
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      margin: 0;
+    }
+  }
+  &__image {
+    @media (max-width: $tablet) {
+      display: none;
+    }
+    border-right: 1.5px solid #d7d7d7;
+  }
+  &__data {
+    padding-left: toRem(80);
+    @media (max-width: $tablet) {
+      padding: toRem(65) 0;
+    }
+  }
+  &__description {
+    margin-bottom: toRem(45);
+    @media (max-width: $tablet) {
+      margin-bottom: toRem(25);
+    }
+  }
+}
+
+.services {
+  margin-top: toRem(-36);
+  border-bottom: 2px solid #d7d7d7;
+  @media (max-width: $tablet) {
+    margin-top: toRem(0);
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    margin-right: toRem(-15);
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-right: 0;
+    }
+  }
+  &__title {
+    margin-bottom: toRem(70);
+    @media (max-width: $tablet) {
+      margin-bottom: toRem(35);
+    }
+  }
+  &__data {
+    transform: translateY(10px);
+    padding-right: toRem(45);
+    padding-top: toRem(80);
+    padding-bottom: toRem(90);
+    max-width: toRem(720);
+    width: 100%;
+    @media (max-width: $tablet) {
+      transform: translate(0px);
+      padding-bottom: toRem(65);
+      padding-top: toRem(65);
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: toRem(20);
+    max-width: toRem(450);
+    &:not(:last-child) {
+      margin-bottom: toRem(55);
+      @media (max-width: $tablet) {
+        margin-bottom: toRem(35);
+      }
+    }
+    p span {
+      font-weight: 500;
+    }
+  }
+  &__image {
+    align-self: flex-end;
+    @media (max-width: $tablet) {
+      border: 1.5px solid #d7d7d7;
+    }
+    @media (max-width: $tablet) {
+      margin: 0 toRem(-15);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+//====================================================================================================

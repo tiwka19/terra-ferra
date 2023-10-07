@@ -1,0 +1,9 @@
+<svg width="488" height="573" viewBox="0 0 488 573" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="365" cy="451" rx="122" ry="121" stroke="#D7D7D7"/>
+<mask id="path-2-inside-1_2701_114" fill="white">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.55091e-06 573C1.44345e-05 438.399 108.751 329.254 243 329L243 573L8.55091e-06 573Z"/>
+</mask>
+<path d="M8.55091e-06 573L-0.999991 573L-0.999991 574L8.63278e-06 574L8.55091e-06 573ZM243 329L244 329L244 327.998L242.998 328L243 329ZM243 573L243 574L244 574L244 573L243 573ZM1.00001 573C1.00001 438.949 109.307 330.253 243.002 330L242.998 328C108.196 328.255 -0.999986 437.849 -0.999991 573L1.00001 573ZM242 329L242 573L244 573L244 329L242 329ZM243 572L8.46903e-06 572L8.63278e-06 574L243 574L243 572Z" fill="#D7D7D7" mask="url(#path-2-inside-1_2701_114)"/>
+<rect x="242" y="329" width="329" height="1.00001" transform="rotate(-90 242 329)" fill="#D7D7D7"/>
+<rect x="487" y="330" width="244" height="1.00002" transform="rotate(180 487 330)" fill="#D7D7D7"/>
+</svg>

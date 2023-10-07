@@ -1,0 +1,137 @@
+//====================================================================================================
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 20px 0;
+  background-color: #fff;
+  border-bottom: 1px solid #d7d7d7;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(15);
+    z-index: 5;
+    span {
+      font-size: toRem(16);
+    }
+  }
+  &__menu {
+    flex: 1 1 auto;
+  }
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: toRem(15);
+    @media (max-width: $mobile) {
+      padding-right: toRem(10);
+    }
+  }
+  &__button {
+    display: block;
+    @include adaptiveValue('margin-left', 35, 15);
+    font-size: toRem(16);
+    @media (max-width: em(586)) {
+      display: none;
+    }
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+    align-items: center;
+    @include adaptiveValue('gap', 35, 15);
+    justify-content: flex-end;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: toRem(30);
+      align-items: flex-start;
+      margin-bottom: toRem(30);
+    }
+  }
+  &__body {
+    @media (max-width: $mobile) {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      overflow: auto;
+      transition: all 0.2s ease 0s;
+      transform: translateX(120%);
+      background-color: #fff;
+      padding: toRem(150) toRem(15) toRem(30) toRem(15);
+      .menu-open & {
+        transform: translateX(0);
+      }
+    }
+  }
+  &__button {
+    @media (min-width: $mobile) {
+      display: none;
+    }
+  }
+  &__link {
+    font-size: toRem(18);
+    transition: color 0.2s;
+    @media (max-width: $mobile) {
+      font-size: toRem(24);
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        color: $primaryColor;
+      }
+    }
+  }
+}
+//====================================================================================================
+
+.icon-menu {
+  display: none;
+  @media (max-width: $mobile) {
+    display: block;
+    position: relative;
+    width: toRem(25);
+    height: toRem(17);
+    z-index: 5;
+    border-radius: toRem(18);
+    @media (any-hover: none) {
+      cursor: default;
+    }
+    span,
+    &::before {
+      content: '';
+      transition: all 0.3s ease 0s;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: toRem(2);
+      background-color: #3d3745;
+      border-radius: toRem(18);
+    }
+    &::before {
+      top: 0;
+    }
+    span {
+      top: calc(50% - toRem(1));
+      transform: translateX(10px);
+    }
+    .menu-open & {
+      span {
+        bottom: calc(50% - toRem(1));
+        transform: rotate(45deg);
+      }
+      &::before {
+        top: calc(50% - toRem(1));
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
