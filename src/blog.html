@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  @@include('html/_head.htm',{"title":"Главная"})
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page page-blog">
+        <div class="blog">
+          <div class="blog__main">
+            <div class="blog__container">
+              <div class="blog__wrapper">
+                <h1 class="blog__title">Blog</h1>
+                <p class="blog__main-description">
+                  Fashion's vast. The real game-changers? Few but fierce. We spotlight them. We predict the next wave. We give unfiltered advice.
+                </p>
+                <div class="blog__main-image">
+                  <img src="@img/blog-main.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blog__container">
+            <p class="blog__description">
+              Fashion's vast. The real game-changers? Few but fierce. We spotlight them. We predict the next wave. We give unfiltered advice.
+            </p>
+          </div>
+
+          <div class="blog__posts posts">
+            <div class="posts__container">
+              <div class="posts__wrapper">
+                <a href="post.html" class="post">
+                  <span class="post__date">08.08.2023</span>
+                  <div class="post__image"><img src="@img/blog/blog.png" width="437" height="310" alt="blog" /></div>
+                  <h2 class="post__title">Article title</h2>
+                  <p class="post__descr">Lorem ipsum dolor sit amet consectetur. Rhoncus purus amet turpis orci ultricies metus....</p>
+                </a>
+                <a href="#" class="post">
+                  <span class="post__date">08.08.2023</span>
+                  <div class="post__image"><img src="@img/blog/blog.png" width="437" height="310" alt="blog" /></div>
+                  <h2 class="post__title">Article title</h2>
+                  <p class="post__descr">Lorem ipsum dolor sit amet consectetur. Rhoncus purus amet turpis orci ultricies metus....</p>
+                </a>
+                <a href="#" class="post">
+                  <span class="post__date">08.08.2023</span>
+                  <div class="post__image"><img src="@img/blog/blog.png" width="437" height="310" alt="blog" /></div>
+                  <h2 class="post__title">Article title</h2>
+                  <p class="post__descr">Lorem ipsum dolor sit amet consectetur. Rhoncus purus amet turpis orci ultricies metus....</p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <section class="contacts">
+            <div class="contacts__container">
+              <h2 class="contacts__title">In-depth social media report.</h2>
+              <div class="contacts__data">
+                <div class="contacts__button">
+                  <a href="#" class="button">Get Free Report Now</a>
+                </div>
+                <a href="#"><img src="@img/youtube.svg" alt="youtube" /></a>
+                <a href="#"><img src="@img/instagram.svg" alt="youtube" /></a>
+                <a href="#"><img src="@img/tiktok.svg" alt="youtube" /></a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
+</html>

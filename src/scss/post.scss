@@ -1,0 +1,77 @@
+.page-post {
+  .post {
+    padding-top: toRem(157);
+    &__hero {
+      max-width: toRem(1165);
+      margin-bottom: toRem(80);
+    }
+    &__title {
+      @include adaptiveValue('font-size', 64, 44);
+      line-height: math.div(72, 64);
+      margin-bottom: toRem(25);
+      text-transform: uppercase;
+    }
+    &__lead {
+      padding-left: toRem(25);
+      position: relative;
+      margin-bottom: toRem(25);
+      max-width: toRem(971);
+      @include adaptiveValue('font-size', 26, 20);
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: toRem(4);
+        height: 100%;
+        background-color: #5c6bd7;
+        border-radius: toRem(13);
+      }
+    }
+    &__description {
+      margin-bottom: toRem(80);
+    }
+    &__image {
+      margin-bottom: toRem(60);
+    }
+  }
+  .prose {
+    padding-bottom: toRem(60);
+    img {
+      max-width: 100%;
+      padding: toRem(15) 0 toRem(30) 0;
+    }
+    p,
+    ul,
+    h2,
+    h3,
+    h4 {
+      max-width: toRem(665);
+      margin: 0 auto;
+    }
+    p {
+      padding-bottom: toRem(15);
+    }
+    h2,
+    h3,
+    h4 {
+      color: #f27c4f;
+      text-transform: uppercase;
+      padding-top: toRem(30);
+      margin-bottom: toRem(15);
+    }
+    ul {
+      padding-left: toRem(20);
+      padding-bottom: toRem(15);
+    }
+    ul li {
+      list-style: disc;
+    }
+    ul li:not(:last-child) {
+      margin-bottom: toRem(20);
+    }
+  }
+  .contacts {
+    border-top: 1px solid #d7d7d7;
+  }
+}
