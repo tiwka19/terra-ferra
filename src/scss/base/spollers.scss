@@ -1,92 +1,92 @@
-// Базові стилі спойлерів
-// Сніппет (HTML): spoller
-
-// Блок зі спойлерами
+//Basic spoiler styles
+//Snippet (HTML): poller
+//Block with spoilers
 .spollers {
-	display: grid;
-	gap: 15px;
+  display: grid;
+  gap: 15px;
 }
-// Спойлер
+//Spoiler alert
 .spollers__item {
-	font-size: toRem(20);
+  font-size: toRem(34);
+  line-height: math.div(39, 34);
+  font-weight: 500;
 }
-// Заголовок спойлера
+//spoiler title
 .spollers__title {
-	width: 100%;
-	cursor: default;
-	text-align: left;
-	border: 1px solid #eee;
-	padding: toRem(10) toRem(15);
-	border-radius: toRem(5);
-	position: relative;
-	list-style: none;
-	&::marker {
-	}
-	._spoller-init & {
-		cursor: pointer;
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			right: 10px;
-			top: 50%;
-			background-color: #000;
-			height: 2px;
-			width: 15px;
-			transition: transform 0.5s ease 0s;
-		}
-		&::before {
-			transform: translate(-75%, -50%) rotate(40deg);
-		}
-		&::after {
-			transform: translate(0, -50%) rotate(-40deg);
-		}
-		&._spoller-active {
-			&::before {
-				transform: translateX(-75%) rotate(-40deg);
-			}
-			&::after {
-				transform: rotate(40deg);
-			}
-		}
-		/*
-		._spoller-init & {
-			position: relative;
-			width: 100%;
-			text-align: left;
-			&::before,
-			&::after {
-				content: "";
-				position: absolute;
-				right: 0;
-				top: toRem(12);
-				height: toRem(1);
-				transition: all 0.3s ease 0s;
-				width: toRem(10);
-				background-color: #000;
-			}
-			&::before {
-				transform: rotate(40deg);
-				right: toRem(7);
-			}
-			&::after {
-				transform: rotate(-40deg);
-			}
-		}
-		&._spoller-active {
-			&::before {
-				transform: rotate(-40deg);
-			}
-			&::after {
-				transform: rotate(40deg);
-			}
-		}
-		*/
-	}
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: toRem(10);
+	font-weight: 500;
+  position: relative;
+  list-style: none;
+  span {
+    display: block;
+    pointer-events: none;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: #5c6bd7;
+    }
+  }
+
+  ._spoller-init & {
+    svg {
+      transition: transform 0.3s;
+    }
+    &._spoller-active {
+      color: #5c6bd7;
+      svg {
+        transform: rotate(-90deg);
+      }
+      svg path {
+        stroke: #5c6bd7;
+      }
+    }
+    /*
+._spoller-init & {
+position: relative;
+width: 100%;
+text-align: left;
+&::before,
+&::after {
+content: "";
+position: absolute;
+right: 0;
+top: toRem(12);
+height: toRem(1);
+transition: all 0.3s ease 0s;
+width: toRem(10);
+background-color: #000;
 }
-// Контент спойлера
+&::before {
+transform: rotate(40deg);
+right: toRem(7);
+}
+&::after {
+transform: rotate(-40deg);
+}
+}
+&._spoller-active {
+&::before {
+transform: rotate(-40deg);
+}
+&::after {
+transform: rotate(40deg);
+}
+}
+*/
+  }
+}
+//spoiler content
 .spollers__body {
-	padding: toRem(20);
-	border-radius: toRem(5);
-	border: 1px solid #eee;
+  padding-top: toRem(15);
+  margin-top: toRem(20);
+  border-top: 1px solid #d7d7d7;
+  font-size: toRem(20);
+  line-height: math.div(22, 20);
+  font-weight: 400;
 }

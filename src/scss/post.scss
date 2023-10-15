@@ -1,9 +1,8 @@
 .page-post {
   .post {
-    padding-top: toRem(157);
+    @include adaptiveValue('padding-top', 157, 56);
     &__hero {
       max-width: toRem(1165);
-      margin-bottom: toRem(80);
     }
     &__title {
       @include adaptiveValue('font-size', 64, 44);
@@ -33,6 +32,13 @@
     }
     &__image {
       margin-bottom: toRem(60);
+      @media (max-width: $mobile) {
+        margin: 0 toRem(-15) toRem(30) toRem(-15);
+      }
+      img {
+        max-width: 100%;
+        min-height: toRem(65);
+      }
     }
   }
   .prose {
@@ -43,15 +49,18 @@
     }
     p,
     ul,
+    a,
     h2,
     h3,
     h4 {
       max-width: toRem(665);
       margin: 0 auto;
     }
+
     p {
       padding-bottom: toRem(15);
     }
+
     h2,
     h3,
     h4 {

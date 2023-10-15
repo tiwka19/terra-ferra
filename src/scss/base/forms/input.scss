@@ -1,34 +1,105 @@
 //<INPUT>
 // Сніппет (HTML): inp
-input[type="text"],
-input[type="email"],
-input[type="tel"],
+input[type='text'],
+input[type='email'],
+input[type='tel'],
 textarea {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 .input {
-	border-radius: 0 !important;
-	width: 100%;
-	display: block;
-	padding: 0px 20px;
-	border: 1px solid #eee;
-	&._form-focus {
-	}
-	&._form-error {
-	}
+  width: 100%;
+  display: block;
+  padding: toRem(15);
+  border: toRem(2) solid #ebeaec;
+  position: relative;
+  font-size: toRem(18);
+  line-height: math.div(21, 18);
+  border-radius: toRem(13);
+  margin-bottom: toRem(15);
+  outline: 0;
+  transition: border 0.3s ease 0s;
+  &::placeholder {
+    color: $mainColor;
+  }
+  &._form-focus {
+  }
+  &._form-error {
+    border: toRem(2) solid rgb(171, 53, 53);
+  }
+  &.just-validate-error-field {
+    border: toRem(2) solid #b81111;
+  }
+}
+
+._form-error {
+  input[type='checkbox']:checked + label:before,
+  input[type='checkbox']:not(:checked) + label:before {
+    border: toRem(2) solid rgb(171, 53, 53);
+  }
 }
 .input[placeholder]:not([data-placeholder-nohiden]) {
-	&::placeholder {
-		transition: opacity 0.3s;
-	}
-	&:focus::placeholder {
-		opacity: 0;
-	}
+  &::placeholder {
+    transition: opacity 0.3s;
+  }
+  &:focus::placeholder {
+    opacity: 0;
+  }
 }
 
 textarea.input {
-	resize: none;
-	padding: 0px 0px;
+  resize: none;
+  padding: 0px 0px;
+}
+
+.switch {
+  height: toRem(64);
+  position: relative;
+  width: toRem(120);
+  @media (max-width: $tablet) {
+    width: toRem(81);
+    height: toRem(41);
+    flex: 0 0 toRem(81);
+  }
+}
+
+.switch input {
+  display: none;
+}
+
+.advantages__slider {
+  background-color: #5c6bd7;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: toRem(50);
+}
+
+.advantages__slider:before {
+  content: '';
+  background-color: #fff;
+  bottom: 5.5px;
+  left: 6px;
+  position: absolute;
+  transition: 0.3s;
+  width: toRem(53);
+  height: toRem(53);
+  border-radius: toRem(50);
+  @media (max-width: $tablet) {
+    width: toRem(35);
+    height: toRem(35);
+    bottom: toRem(3);
+  }
+}
+
+input:checked + .advantages__slider {
+  background-color: #f27c4f;
+}
+
+input:checked + .advantages__slider:before {
+  transform: translateX(100%);
 }

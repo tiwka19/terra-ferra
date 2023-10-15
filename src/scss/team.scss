@@ -1,0 +1,58 @@
+.team {
+  padding-top: toRem(57);
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: toRem(15);
+    margin-bottom: toRem(30);
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  &__title {
+    margin-bottom: toRem(0);
+  }
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: toRem(40);
+  }
+  &__slide {
+    max-width: toRem(385);
+    @media (max-width: $tablet) {
+      max-width: 100%;
+    }
+  }
+
+  &__person-image {
+    max-width: 100%;
+    filter: grayscale(1);
+    transition: filter 0.3s ease 0s;
+    margin-bottom: toRem(30);
+    @media (any-hover: hover) {
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
+  }
+  &_wrapper {
+    height: 100%;
+  }
+  &__slider {
+    width: calc(100vw - (100vw - 1440px) / 2);
+    @media (max-width: $tablet) {
+      width: auto;
+    }
+  }
+
+  &__person-job {
+    color: #f27c4f;
+    font-size: toRem(26);
+    line-height: math.div(29, 26);
+  }
+  // &__wrapper {
+  // 	justify-content: center;
+  // }
+}

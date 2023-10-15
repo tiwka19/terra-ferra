@@ -1,6 +1,5 @@
 //====================================================================================================
 .hero {
-
   border-bottom: 1.5px solid #d7d7d7;
   &__top {
     display: grid;
@@ -212,9 +211,16 @@
   }
   &__description {
     margin-bottom: toRem(45);
+    @include adaptiveValue('font-size', 34, 24);
     @media (max-width: $tablet) {
       margin-bottom: toRem(25);
     }
+  }
+  &__link {
+    color: $primaryColor;
+    font-size: toRem(24);
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 }
 

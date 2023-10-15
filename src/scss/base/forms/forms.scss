@@ -1,28 +1,55 @@
 //<FORM>
 // Сніппет (HTML):
 .form {
-	&__row {
-	}
-	&__column {
-	}
-	&__line {
-	}
-	&__input {
-	}
-	&__button {
-	}
-	&__error {
-	}
+  &__row {
+    position: relative;
+    display: flex;
+    gap: toRem(10);
+    margin-bottom: toRem(10);
+    p {
+      margin-bottom: toRem(30);
+      display: flex;
+      gap: toRem(5);
+    }
+    label a {
+      color: #5c6bd7;
+    }
+  }
+  &__column {
+  }
+  &__line {
+  }
+  &__input {
+  }
+  &__button {
+    // pointer-events: none;
+    background-color: #b1afb5 !important;
+		cursor: pointer;
+    &._active {
+      cursor: pointer;
+      pointer-events: all;
+      background-color: #5c6bd7 !important;
+    }
+    &._sending {
+      pointer-events: none;
+    }
+  }
+  &__error {
+  }
+  &__send {
+    margin-top: toRem(30);
+    text-align: center;
+  }
 }
 //</FORM>
 
 // <BUTTONS>
 // Сніппет (HTML): btn
-@import "button";
+@import 'button';
 
 // <INPUTS>
 // Сніппет (HTML): inp
-// @import "input";
+@import "input";
 
 // <CHECK>
 // Сніппет (HTML): chk
