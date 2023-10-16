@@ -225,11 +225,7 @@
 }
 
 .services {
-  margin-top: toRem(-36);
-  border-bottom: 2px solid #d7d7d7;
-  @media (max-width: $tablet) {
-    margin-top: toRem(0);
-  }
+  border-bottom: 1px solid #d7d7d7;
   &__wrapper {
     display: flex;
     align-items: center;
@@ -249,8 +245,6 @@
   &__data {
     transform: translateY(10px);
     padding-right: toRem(45);
-    padding-top: toRem(80);
-    padding-bottom: toRem(90);
     max-width: toRem(720);
     width: 100%;
     @media (max-width: $tablet) {
