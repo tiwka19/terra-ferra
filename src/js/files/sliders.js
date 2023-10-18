@@ -58,6 +58,29 @@ function initSliders() {
       },
     });
   }
+
+  if (document.querySelector('.advantages__content')) {
+    const swiper = new Swiper('.swiper', {
+      modules: [Navigation],
+      slidesPerView: 1,
+      spaceBetween: 30,
+      speed: 800,
+      allowTouchMove: false,
+    });
+    // Получаем ссылку на чекбокс
+    const slideCheckbox = document.getElementById('slideCheckbox');
+
+    // Добавляем обработчик события изменения состояния чекбокса
+    slideCheckbox.addEventListener('change', () => {
+      // Если чекбокс активен, переключаемся на второй слайд
+      if (slideCheckbox.checked) {
+        swiper.slideTo(1);
+      } else {
+        // Если чекбокс неактивен, переключаемся на первый слайд
+        swiper.slideTo(0);
+      }
+    });
+  }
 }
 
 window.addEventListener('load', function (e) {

@@ -55,7 +55,7 @@
               <h2 class="contacts__title">In-depth social media report.</h2>
               <div class="contacts__data">
                 <div class="contacts__button">
-                  <a href="#" class="button">Get Free Report Now</a>
+                  <button class="button" data-popup="#popup">Get Free Report Now</button>
                 </div>
                 <a href="#"><img src="@img/youtube.svg" alt="youtube" /></a>
                 <a href="#"><img src="@img/instagram.svg" alt="youtube" /></a>
@@ -66,6 +66,7 @@
         </div>
       </main>
       @@include('html/_footer.htm',{})
+      @@include('html/_popup.htm',{})
     </div>
     @@include('html/_js.htm',{})
   </body>
