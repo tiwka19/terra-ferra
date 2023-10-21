@@ -21,6 +21,9 @@
     span {
       font-size: toRem(16);
     }
+    img {
+      margin-left: -5px;
+    }
   }
   &__menu {
     flex: 1 1 auto;

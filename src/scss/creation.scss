@@ -1,6 +1,5 @@
 //====================================================================================================
 .page-creation {
-
   .hero {
     padding-top: toRem(50);
     padding-bottom: toRem(50);
@@ -11,6 +10,7 @@
       margin: 0 -25px;
       img {
         max-width: 100%;
+        height: auto;
         min-height: toRem(368);
         object-fit: cover;
       }
@@ -276,7 +276,7 @@
       }
     }
     &__content {
-      padding: toRem(25) toRem(15);
+      padding: 0 25px 25px 25px;
       ul {
         margin-bottom: toRem(45);
       }
@@ -450,7 +450,9 @@
   .feedback {
     position: relative;
     border-top: 1px solid #d7d7d7;
-
+    border-bottom: 1px solid #d7d7d7;
+    padding-top: toRem(50);
+    padding-bottom: toRem(50);
     &__title {
       @include adaptiveValue('font-size', 34, 28);
       margin-bottom: toRem(35);
@@ -459,8 +461,6 @@
       padding-left: toRem(15);
       padding-right: toRem(15);
       text-align: center;
-      @include adaptiveValue('padding-top', 100, 50);
-      @include adaptiveValue('padding-bottom', 100, 50);
     }
     &__mask {
       margin: 0 auto;

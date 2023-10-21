@@ -7,9 +7,10 @@ import '../../scss/base/swiper.scss';
 
 function initSliders() {
   if (document.querySelector('.brand-swiper')) {
-    new Swiper('.brand-swiper', {
+    const swiper = new Swiper('.brand-swiper', {
       modules: [Navigation, Autoplay],
       slidesPerView: 'auto',
+      observer: true,
       centeredSlides: true,
       Autoplay: {
         delay: 1000,
@@ -30,6 +31,7 @@ function initSliders() {
         },
       },
     });
+    swiper.update();
   }
 
   if (document.querySelector('.team__slider')) {

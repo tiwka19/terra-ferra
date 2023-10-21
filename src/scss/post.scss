@@ -1,6 +1,6 @@
 .page-post {
   .post {
-    @include adaptiveValue('padding-top', 157, 56);
+    @include adaptiveValue('padding-top', 100, 50);
     &__hero {
       max-width: toRem(1165);
     }
@@ -28,7 +28,7 @@
       }
     }
     &__description {
-      margin-bottom: toRem(80);
+      margin-bottom: toRem(30);
     }
     &__image {
       margin-bottom: toRem(60);
@@ -78,6 +78,9 @@
     }
     ul li:not(:last-child) {
       margin-bottom: toRem(20);
+    }
+    .button {
+      margin-top: toRem(15);
     }
   }
   .contacts {

@@ -88,6 +88,8 @@
 		"just-validate": "^4.2.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
-		"simplebar": "latest"
+		"sal.js": "^0.8.5",
+		"simplebar": "latest",
+		"toastify-js": "^1.12.0"
 	}
 }
