@@ -1,0 +1,10 @@
+<svg width="1004" height="402" viewBox="0 0 1004 402" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="400" height="1.00002" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 402 401)" fill="#D7D7D7"/>
+<rect width="400" height="1.00002" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 201 401)" fill="#D7D7D7"/>
+<mask id="path-3-inside-1_2705_102" fill="white">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0C111.009 0 201 89.9908 201 201C201 312.009 111.009 402 0 402V0Z"/>
+</mask>
+<path d="M0 0H-1V-1H0V0ZM0 402V403H-1V402H0ZM200 201C200 90.5431 110.457 1 0 1V-1C111.562 -1 202 89.4385 202 201H200ZM0 401C110.457 401 200 311.457 200 201H202C202 312.562 111.562 403 0 403V401ZM1 0V402H-1V0H1Z" fill="#D7D7D7" mask="url(#path-3-inside-1_2705_102)"/>
+<rect width="400" height="1.00002" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 1004 401)" fill="#D7D7D7"/>
+<rect width="200" height="1.00002" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 602 201)" fill="#D7D7D7"/>
+</svg>
