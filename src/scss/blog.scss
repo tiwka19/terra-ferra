@@ -3,8 +3,8 @@
     &__main {
       border-bottom: 1px solid #d7d7d7;
       margin-bottom: toRem(35);
-      @media (max-width:$mobile){
-         margin-bottom: toRem(0); 
+      @media (max-width: $mobile) {
+        margin-bottom: toRem(0);
       }
     }
     &__wrapper {
@@ -74,7 +74,7 @@
       }
     }
   }
-  
+
   .posts {
     padding-bottom: toRem(95);
     border-bottom: 1px solid #d7d7d7;
@@ -82,6 +82,7 @@
       @include adaptiveValue('padding-top', 90, 65);
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      align-items: flex-start;
       gap: toRem(60) toRem(20);
       @media (max-width: $tablet) {
         grid-template-columns: 1fr 1fr;
@@ -92,7 +93,7 @@
       }
     }
   }
-  
+
   .post {
     @media (any-hover: hover) {
       &:hover {
@@ -131,6 +132,4 @@
       }
     }
   }
-  
 }
-

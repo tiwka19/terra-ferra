@@ -1549,7 +1549,7 @@ body::after {
 
 .page-home .benefits__image {
   height: 100%;
-  margin-left: -8.125rem;
+  margin-left: -0.9375rem;
 }
 
 .page-home .benefits__image img {
@@ -1596,6 +1596,10 @@ body::after {
      object-fit: contain;
 }
 
+.page-home .preview-2 {
+  border-top: 1px solid #d7d7d7;
+}
+
 .page-home .preview-2 img {
   min-height: 30.375rem;
   -o-object-fit: cover;
@@ -1614,7 +1618,8 @@ body::after {
 }
 
 .page-home .advantages__image {
-  border-right: 1.5px solid #d7d7d7;
+  border-right: 1px solid #d7d7d7;
+  border-left: 1px solid #d7d7d7;
 }
 
 .page-home .advantages__data {
@@ -1635,6 +1640,10 @@ body::after {
 .page-home .services {
   margin-top: -2.25rem;
   border-bottom: 2px solid #d7d7d7;
+}
+
+.page-home .services__container {
+  border-left: 1px solid #d7d7d7;
 }
 
 .page-home .services__wrapper {
@@ -1658,6 +1667,7 @@ body::after {
   padding-right: 2.8125rem;
   padding-top: 5rem;
   padding-bottom: 5.625rem;
+  padding-left: 2.8125rem;
   max-width: 45rem;
   width: 100%;
 }
@@ -1689,161 +1699,7 @@ body::after {
 .page-home .services__image img {
   width: 100%;
   height: 100%;
-}
-
-.page-home .benefits {
-  border-top: 1.5px solid #d7d7d7;
-}
-
-.page-home .benefits__container {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-grid-columns: 34.375rem 1fr;
-  grid-template-columns: 34.375rem 1fr;
-}
-
-.page-home .benefits__image {
-  height: 100%;
-  margin-left: -8.125rem;
-}
-
-.page-home .benefits__image img {
-  height: 100%;
-  width: 100%;
-}
-
-.page-home .benefits__data {
-  padding: 5rem 0 5rem 5rem;
-}
-
-.page-home .benefits__items {
-  margin-bottom: 0.9375rem;
-}
-
-.page-home .benefits__item {
-  max-width: 25rem;
-}
-
-.page-home .benefits__item:not(:last-child) {
-  margin-bottom: 3.4375rem;
-}
-
-.page-home .benefits__item-title {
-  margin-bottom: 1.5625rem;
-}
-
-.page-home .benefits__link {
-  color: #5c6bd7;
-  font-size: 1.5rem;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.page-home .preview__wrapper {
-  margin-top: -1px;
-}
-
-.page-home .preview__wrapper img,
-.page-home .preview__wrapper picture {
-  max-width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-.page-home .preview-2 img {
-  min-height: 30.375rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-}
-
-.page-home .advantages__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: -0.9375rem;
-}
-
-.page-home .advantages__image {
-  border-right: 1.5px solid #d7d7d7;
-}
-
-.page-home .advantages__data {
-  padding-left: 5rem;
-}
-
-.page-home .advantages__description {
-  margin-bottom: 2.8125rem;
-}
-
-.page-home .advantages__link {
-  color: #5c6bd7;
-  font-size: 1.5rem;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.page-home .services {
-  border-bottom: 1px solid #d7d7d7;
-}
-
-.page-home .services__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: -0.9375rem;
-}
-
-.page-home .services__title {
-  margin-bottom: 4.375rem;
-}
-
-.page-home .services__data {
-  -webkit-transform: translateY(10px);
-      -ms-transform: translateY(10px);
-          transform: translateY(10px);
-  padding-right: 2.8125rem;
-  max-width: 45rem;
-  width: 100%;
-}
-
-.page-home .services__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1.25rem;
-  max-width: 28.125rem;
-}
-
-.page-home .services__item:not(:last-child) {
-  margin-bottom: 3.4375rem;
-}
-
-.page-home .services__item p span {
-  font-weight: 500;
-}
-
-.page-home .services__image {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
-.page-home .services__image img {
-  width: 100%;
-  height: 100%;
+  border-left: 1px solid #d7d7d7;
 }
 
 .contacts__container {
@@ -1937,6 +1793,9 @@ body::after {
   display: grid;
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   gap: 3.75rem 1.25rem;
 }
 
@@ -3131,14 +2990,6 @@ body::after {
     font-size: 2.125rem;
   }
 
-  .page-home .benefits__item-title {
-    font-size: 2.125rem;
-  }
-
-  .page-home .advantages__description {
-    font-size: 2.125rem;
-  }
-
   .contacts__title {
     font-size: 2.125rem;
   }
@@ -3438,14 +3289,6 @@ body::after {
     font-size: 1.5rem;
   }
 
-  .page-home .benefits__item-title {
-    font-size: 1.5rem;
-  }
-
-  .page-home .advantages__description {
-    font-size: 1.5rem;
-  }
-
   .contacts__title {
     font-size: 1.375rem;
   }
@@ -3579,20 +3422,6 @@ body::after {
   .page-home .benefits__item:not(:last-child) {
     margin-bottom: 2.1875rem;
   }
-
-  .page-home .benefits__image {
-    display: none;
-  }
-
-  .page-home .benefits__data {
-    padding-left: 0;
-    padding-top: 4.0625rem;
-    padding-bottom: 4.0625rem;
-  }
-
-  .page-home .benefits__item:not(:last-child) {
-    margin-bottom: 2.1875rem;
-  }
 }
 
 @media (max-width: 81.25em) {
@@ -3608,11 +3437,6 @@ body::after {
 }
 
 @media (max-width: 73.75em) {
-  .page-home .benefits__container {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-  }
-
   .page-home .benefits__container {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -3709,61 +3533,7 @@ body::after {
             transform: translate(0px);
     padding-bottom: 4.0625rem;
     padding-top: 4.0625rem;
-  }
-
-  .page-home .services__item:not(:last-child) {
-    margin-bottom: 2.1875rem;
-  }
-
-  .page-home .services__image {
-    border: 1.5px solid #d7d7d7;
-  }
-
-  .page-home .services__image {
-    margin: 0 -0.9375rem;
-  }
-
-  .page-home .advantages__wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin: 0;
-  }
-
-  .page-home .advantages__image {
-    display: none;
-  }
-
-  .page-home .advantages__data {
-    padding: 4.0625rem 0;
-  }
-
-  .page-home .advantages__description {
-    margin-bottom: 1.5625rem;
-  }
-
-  .page-home .services__wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    margin-right: 0;
-  }
-
-  .page-home .services__title {
-    margin-bottom: 2.1875rem;
-  }
-
-  .page-home .services__data {
-    -webkit-transform: translate(0px);
-        -ms-transform: translate(0px);
-            transform: translate(0px);
-    padding-bottom: 4.0625rem;
-    padding-top: 4.0625rem;
+    padding-left: 0;
   }
 
   .page-home .services__item:not(:last-child) {
@@ -4048,10 +3818,6 @@ body::after {
   .page-home .hero__title {
     margin: 0;
     margin-bottom: 1.5625rem;
-  }
-
-  .page-home .benefits__item-title {
-    margin-bottom: 0.9375rem;
   }
 
   .page-home .benefits__item-title {
@@ -4435,30 +4201,6 @@ body::after {
 @supports not (font-size: clamp( 2.75rem , 2.402173913rem  +  1.7391304348vw , 4rem )) {
     .page-home .hero__title {
       font-size: calc(2.75rem + 1.25 * (100vw - 20rem) / 71.875);
-    }
-}
-
-@supports (font-size: clamp( 1.5rem , 1.3260869565rem  +  0.8695652174vw , 2.125rem )) {
-    .page-home .benefits__item-title {
-      font-size: clamp( 1.5rem , 1.3260869565rem  +  0.8695652174vw , 2.125rem );
-    }
-}
-
-@supports not (font-size: clamp( 1.5rem , 1.3260869565rem  +  0.8695652174vw , 2.125rem )) {
-    .page-home .benefits__item-title {
-      font-size: calc(1.5rem + 0.625 * (100vw - 20rem) / 71.875);
-    }
-}
-
-@supports (font-size: clamp( 1.5rem , 1.3260869565rem  +  0.8695652174vw , 2.125rem )) {
-    .page-home .advantages__description {
-      font-size: clamp( 1.5rem , 1.3260869565rem  +  0.8695652174vw , 2.125rem );
-    }
-}
-
-@supports not (font-size: clamp( 1.5rem , 1.3260869565rem  +  0.8695652174vw , 2.125rem )) {
-    .page-home .advantages__description {
-      font-size: calc(1.5rem + 0.625 * (100vw - 20rem) / 71.875);
     }
 }
 
