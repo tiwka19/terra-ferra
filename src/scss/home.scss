@@ -83,7 +83,7 @@
     &__image {
       height: 100%;
       margin-left: toRem(-15);
-      @media (max-width: $pc) {
+      @media (max-width: em(1200)) {
         display: none;
       }
       img {
@@ -94,7 +94,7 @@
 
     &__data {
       padding: toRem(80) 0 toRem(80) toRem(80);
-      @media (max-width: $pc) {
+      @media (max-width: em(1200)) {
         padding-left: 0;
         padding-top: toRem(65);
         padding-bottom: toRem(65);
@@ -129,6 +129,7 @@
   }
 
   .preview {
+    border-top: 1px solid #d7d7d7;
     &__wrapper {
       margin: 0 toRem(-15);
       img,
@@ -149,6 +150,7 @@
   }
 
   .advantages {
+    border-top: 1px solid #d7d7d7;
     &__wrapper {
       display: flex;
       align-items: center;
@@ -162,8 +164,6 @@
       @media (max-width: $tablet) {
         display: none;
       }
-      border-right: 1px solid #d7d7d7;
-      border-left: 1px solid #d7d7d7;
     }
     &__data {
       padding-left: toRem(80);
@@ -187,8 +187,8 @@
   }
 
   .services {
-    margin-top: toRem(-36);
-    border-bottom: 2px solid #d7d7d7;
+    border-top: 1px solid #d7d7d7;
+    border-bottom: 1px solid #d7d7d7;
     @media (max-width: $tablet) {
       margin-top: toRem(0);
     }
@@ -197,8 +197,8 @@
     }
     &__wrapper {
       display: flex;
-      align-items: center;
-      margin-right: toRem(-15);
+      align-items: stretch;
+      gap: toRem(30);
       @media (max-width: $tablet) {
         flex-direction: column;
         align-items: flex-start;
@@ -207,24 +207,21 @@
     }
     &__title {
       margin-bottom: toRem(70);
+      font-size: toRem(64);
+      @include adaptiveValue('font-size', 64, 28, 3, 1920, 992);
+      @include adaptiveValue('margin-bottom', 70, 30, 3, 1920, 992);
+      text-transform: uppercase;
       @media (max-width: $tablet) {
         margin-bottom: toRem(35);
       }
     }
     &__data {
-      transform: translateY(10px);
-      padding-right: toRem(45);
-      padding-top: toRem(80);
-      padding-bottom: toRem(90);
-      padding-left: toRem(45);
-      max-width: toRem(720);
-      width: 100%;
-      @media (max-width: $tablet) {
-        transform: translate(0px);
-        padding-bottom: toRem(65);
-        padding-top: toRem(65);
-        padding-left: 0;
+      padding-top: toRem(83);
+      @media (min-width: $tablet) {
+        padding-left: toRem(44);
+        @include adaptiveValue('padding-left', 44, 15, 3, 1920, 992);
       }
+      padding-bottom: toRem(30);
     }
     &__item {
       display: flex;
@@ -240,19 +237,20 @@
       p span {
         font-weight: 500;
       }
+      svg {
+        flex: 0 0 toRem(30);
+      }
     }
     &__image {
-      align-self: flex-end;
-      @media (max-width: $tablet) {
-        border: 1.5px solid #d7d7d7;
-      }
+      margin-right: toRem(-15);
       @media (max-width: $tablet) {
         margin: 0 toRem(-15);
+        border-top: 1px solid #d7d7d7;
       }
       img {
-        width: 100%;
         height: 100%;
-        border-left: 1px solid #d7d7d7;
+        width: 100%;
+        object-fit: contain;
       }
     }
   }

@@ -19,7 +19,7 @@
   justify-content: space-between;
   align-items: center;
   gap: toRem(10);
-	font-weight: 500;
+  font-weight: 500;
   position: relative;
   list-style: none;
   span {
@@ -89,4 +89,13 @@ transform: rotate(40deg);
   font-size: toRem(20);
   line-height: math.div(22, 20);
   font-weight: 400;
+}
+
+details > summary {
+  list-style: none;
+}
+
+details > summary::marker, /* Latest Chrome, Edge, Firefox */ 
+details > summary::-webkit-details-marker /* Safari */ {
+  display: none;
 }

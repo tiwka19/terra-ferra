@@ -3,7 +3,7 @@ import { Autoplay, Navigation } from 'swiper/modules';
 
 import '../../scss/base/swiper.scss';
 // import '../../scss/libs/swiper.scss';
-// import 'swiper/css';
+import 'swiper/css';
 
 function initSliders() {
   if (document.querySelector('.brand-swiper')) {

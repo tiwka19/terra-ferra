@@ -46,7 +46,10 @@
     img {
       max-width: 100%;
       padding: toRem(15) 0 toRem(30) 0;
+      display: block;
+      margin: 0 auto;
     }
+
     p,
     ul,
     a,
@@ -86,4 +89,16 @@
   .contacts {
     border-top: 1px solid #d7d7d7;
   }
+}
+
+.prose img.alignleft {
+  margin: 0 auto 0 0;
+}
+
+.prose img.alignright {
+  margin: 0 0 0 auto;
+}
+
+.prose img.aligncenter {
+  margin: 0 auto;
 }

@@ -82,12 +82,12 @@
 
 .brand-swiper .swiper-slide {
   width: var(--swiper-width);
-  opacity: 0.5;
-  transform: scale(0.84);
+  opacity: 0.5 !important;
+  transform: scale(0.84) !important;
 }
 
 .brand-swiper .swiper-backface-hidden .swiper-slide {
-  transform: scale(0.84) translateZ(0);
+  transform: scale(0.84) translateZ(0) !important;
 }
 
 .brand-swiper .swiper-slide.swiper-slide-active {
